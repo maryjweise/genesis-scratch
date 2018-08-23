@@ -60,4 +60,7 @@ function scratch_setup(){
     
     // Unregister secondary sidebar
     unregister_sidebar( 'sidebar-alt' );
+    
+    // Add theme widget areas
+    include_once( get_stylesheet_directory() . '/includes/widget-areas.php' );
 }
