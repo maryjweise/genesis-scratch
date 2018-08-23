@@ -14,7 +14,7 @@
 load_child_theme_textdomain( 'scratch' );
 
 // Start the engine
-add_action( 'genesis_setup', 'scratch_setup' );
+add_action( 'genesis_setup', 'scratch_setup', 15 );
 
 /*
  * Theme setup.
@@ -53,4 +53,11 @@ function scratch_setup(){
     // Add theme support for footer widgets
     add_theme_support( 'genesis-footer-widgets', 3);
     
+    // Unregister layouts that use secondary sidebar
+    genesis_unregister_layout( 'content-sidebar-sidebar' );
+    genesis_unregister_layout( 'sidebar-content-sidebar' );
+    genesis_unregister_layout( 'sidebar-sidebar-content' );
+    
+    // Unregister secondary sidebar
+    unregister_sidebar( 'sidebar-alt' );
 }
