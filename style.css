@@ -24,7 +24,8 @@ Template: genesis
 	- Gallery
 	- Forms
 	- Tables
-	- Screen Reader Text        
+	- Screen Reader Text 
+- Structure & Layout
 */
 
 /* HTML5 Reset
@@ -106,7 +107,7 @@ body > div {
 
 body {
 	color: #333;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Arimo', sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.625;
@@ -199,7 +200,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Yellowtail', sans-serif;
 	font-weight: 400;
 	line-height: 1.2;
 	margin: 0 0 20px;
@@ -506,4 +507,14 @@ th:first-child {
 
 .more-link {
 	position: relative;
+}
+
+/* Structure & Layout
+--------------------------------------------------------------------------*/
+.site-header,
+.site-inner,
+.site-footer {
+    max-width:1200px;
+    border: 1px solid #000;
+    margin:0 auto;
 }

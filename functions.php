@@ -64,3 +64,10 @@ function scratch_setup(){
     // Add theme widget areas
     include_once( get_stylesheet_directory() . '/includes/widget-areas.php' );
 }
+
+// Add Google fonts stylesheet
+add_action( 'wp_enqueue_scripts', 'scratch_enqueue_styles' );
+function scratch_enqueue_styles() {
+    
+    wp_enqueue_style( 'google-fonts' , '//fonts.googleapis.com/css?family=Arimo:400,400i,700,700i|Yellowtail' );
+}
