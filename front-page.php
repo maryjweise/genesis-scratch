@@ -25,12 +25,12 @@ function scratch_home_page_setup(){
     
     // Add home welcome area if "Home Welcome" widget area is active
     if ( $home_sidebars['home_welcome'] ) {
-        add_action( 'genesis_after_header', 'scratch_add_home_welcome' );
+        add_action( 'genesis_after_header', 'scratch_add_home_welcome',11 );
     }
     
     // Add home welcome area if "Call to Action" widget area is active
     if ( $home_sidebars['call_to_action'] ) {
-        add_action( 'genesis_after_header', 'scratch_add_call_to_action' );
+        add_action( 'genesis_after_header', 'scratch_add_call_to_action',12 );
 
     }
 }
