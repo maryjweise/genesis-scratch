@@ -21,9 +21,7 @@
 --------------------------------------------- */
 
 .site-inner {
-	clear: both;
-	margin: 0 auto;
-	padding: 60px 30px 0;
+	@include contain;
 }
 
 @media only screen and (min-width: 960px) {

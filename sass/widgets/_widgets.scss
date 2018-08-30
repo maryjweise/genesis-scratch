@@ -37,6 +37,14 @@
 	text-align: center;
 }
 
+.home-welcome {
+    @include contain;
+}
+
+.call-to-action {
+    @include contain;
+}
+
 /*--------------------------------------------------------------
 ## Featured Content Widget
 --------------------------------------------------------------*/

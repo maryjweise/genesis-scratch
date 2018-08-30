@@ -77,15 +77,6 @@ and open the template in the editor.
     Created on : Aug 29, 2018, 9:41:05 PM
     Author     : Mary
 */
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Aug 29, 2018, 9:41:13 PM
-    Author     : Mary
-*/
 /*------------------------------------------------------------------------------
 # HTML5 Reset
 ------------------------------------------------------------------------------*/
@@ -879,9 +870,8 @@ blockquote::before {
 /* Site Inner
 --------------------------------------------- */
 .site-inner {
-	clear: both;
+	max-width: 1200px;
 	margin: 0 auto;
-	padding: 60px 30px 0;
 }
 
 @media only screen and (min-width: 960px) {
@@ -1197,6 +1187,16 @@ img.alignright,
 	text-align: center;
 }
 
+.home-welcome {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.call-to-action {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 /*--------------------------------------------------------------
 ## Featured Content Widget
 --------------------------------------------------------------*/
@@ -1357,7 +1357,6 @@ img.alignright,
 	/* Site Header
 	--------------------------------------------- */
 	.site-header {
-		position: fixed;
 		width: 100%;
 		z-index: 9999;
 	}
@@ -1372,6 +1371,7 @@ img.alignright,
 	clear: both;
 	line-height: 1;
 	width: 100%;
+	text-align: center;
 }
 
 .genesis-nav-menu .menu-item {
@@ -1498,8 +1498,7 @@ img.alignright,
 	--------------------------------------------- */
 	.nav-primary {
 		clear: none;
-		float: right;
-		width: auto;
+		width: 100%;
 	}
 	.nav-primary .genesis-nav-menu a {
 		padding-left: 15px;
@@ -1872,6 +1871,8 @@ p.entry-meta {
 	line-height: 1.5;
 	padding: 30px;
 	text-align: center;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .site-footer p {
