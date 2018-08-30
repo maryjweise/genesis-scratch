@@ -1,9 +1,109 @@
 /*
- * SASS Template
- * 
- * @package Scratch
- * @author Mary Weise
- * @link https://marydoesdev.com
- * @copyright Copyright (c) 2018, Mary Weise
- * @license GPL-2.0+
- */
+Theme Name: Scratch
+Theme URI: https://github.com/maryjweise/genesis-scratch
+Author: Mary Weise
+Author URI: https://marydoesdev.com
+Description: Custom responsive child theme built on Genesis Framework
+Version: 1.0.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: 
+Text Domain: scratch
+Template: genesis
+*/
+
+/* Table of Contents
+# HTML5 Reset
+	- Baseline Normalize
+	- Box Sizing
+	- Float Clearing
+# Defaults
+	## Forms
+        ## Gallery
+        ## Headings
+        ## Objects
+        ## Print Styles
+        ## Screen Reader Text
+        ## Skip Links
+        ## Tables
+        ## Typography
+# Structure
+# Common Classes
+	## Avatar
+	## Genesis
+	## Search Form
+	## Titles
+	## WordPress
+# Widgets
+	## Featured Content
+# Plugins
+	## Genesis eNews Extended
+	## Genesis Simple FAQ
+	## Jetpack
+# Site Header
+	- Title Area
+# Site Navigation
+	- Responsive Menu
+	- Header Menu
+	- Footer Menu
+# Content Area
+	- Entry Content
+	- Entry Meta
+	- Pagination
+	- Entry Comments
+# Sidebar
+# Footer Widgets
+# Site Footer
+# Media Queries
+	- Min-width: 960px
+		- Site Header
+		- Genesis Menu
+		- Responsive Menu
+		- Header Menu
+		- Site Inner
+		- Content
+		- Sidebar
+		- Author Box
+		- After Entry
+		- Column Classes
+		- Entry Misc.
+		- Footer Widgets
+*/
+
+@import "variables";
+@import "mixins";
+
+/*------------------------------------------------------------------------------
+# HTML5 Reset
+------------------------------------------------------------------------------*/
+@import "reset";
+
+/*------------------------------------------------------------------------------
+# Defaults
+------------------------------------------------------------------------------*/
+@import "defaults/defaults";
+
+/*------------------------------------------------------------------------------
+# Structure
+------------------------------------------------------------------------------*/
+@import "structure/global";
+
+/*------------------------------------------------------------------------------
+# Common Classes
+------------------------------------------------------------------------------*/
+@import "common/common";
+
+/*------------------------------------------------------------------------------
+# Widgets
+------------------------------------------------------------------------------*/
+@import "widgets/widgets";
+
+/*------------------------------------------------------------------------------
+# Plugins
+------------------------------------------------------------------------------*/
+@import "plugins/plugins";
+
+/*------------------------------------------------------------------------------
+# Site
+------------------------------------------------------------------------------*/
+@import "site/site";
