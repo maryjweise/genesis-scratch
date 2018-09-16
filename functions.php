@@ -53,6 +53,9 @@ function scratch_setup(){
     // Add theme support for footer widgets
     add_theme_support( 'genesis-footer-widgets', 3);
     
+    // Add theme support for custom logo
+    add_theme_support( 'custom-logo' );
+    
     // Unregister layouts that use secondary sidebar
     genesis_unregister_layout( 'content-sidebar-sidebar' );
     genesis_unregister_layout( 'sidebar-content-sidebar' );
@@ -70,4 +73,13 @@ add_action( 'wp_enqueue_scripts', 'scratch_enqueue_styles' );
 function scratch_enqueue_styles() {
     
     wp_enqueue_style( 'google-fonts' , '//fonts.googleapis.com/css?family=Arimo:400,400i,700,700i|Yellowtail' );
+}
+
+// Add logo areas in site header
+add_action ( 'genesis_site_title', 'scratch_custom_logo' );
+
+function scratch_custom_logo() {
+    if(the_custom_logo()): 
+        the_custom_logo;
+    endif;
 }

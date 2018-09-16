@@ -5,6 +5,11 @@
 	-webkit-animation: fadein 1s;
 	animation:         fadein 1s;
 	word-wrap: break-word;
+        background-image:url('img/new-lt-blue-bg-1.jpg');
+        background-size: 100%;
+        background-attachment: fixed;
+        background-position:center;
+        background-repeat:no-repeat;
 }
 
 @keyframes fadein {

@@ -856,6 +856,11 @@ blockquote::before {
 .site-container {
 	animation: fadein 1s;
 	word-wrap: break-word;
+	background-image: url("img/new-lt-blue-bg-1.jpg");
+	background-size: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 @keyframes fadein {
@@ -1308,9 +1313,26 @@ img.alignright,
 /* Site Header
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
-	background-color: #fff;
+	/*background-color: #fff;*/
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 	padding: 0 30px;
+	background-image: url("img/full-width-grass-short.png");
+	background-position: bottom center;
+	background-repeat: repeat-x;
+}
+
+.site-header .wrap {
+	max-width: 1200px;
+	margin: 0px auto;
+	padding-top: 30px;
+}
+
+.site-header .header-widget-area {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-flow: row-reverse;
+	    flex-flow: row-reverse;
+	margin-bottom: -50px;
 }
 
 /* Title Area
@@ -1491,6 +1513,13 @@ img.alignright,
 .nav-primary {
 	clear: left;
 	width: 100%;
+	background-color: #01A64E;
+	color: #ffffff;
+}
+
+.nav-primary a {
+	color: #ffffff;
+	text-transform: uppercase;
 }
 
 @media only screen and (min-width: 960px) {

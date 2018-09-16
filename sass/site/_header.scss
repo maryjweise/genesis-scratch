@@ -2,9 +2,24 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-	background-color: #fff;
+	/*background-color: #fff;*/
 	box-shadow: 0 0 20px rgba(0,0,0,0.05);
 	padding: 0 30px;
+        background-image:url('img/full-width-grass-short.png');
+        background-position:bottom center;
+        background-repeat:repeat-x;
+        
+        .wrap {
+            max-width:1200px;
+            margin: 0px auto;
+            padding-top:30px;
+        }
+        
+        .header-widget-area {
+            display:flex;
+            flex-flow:row-reverse;
+            margin-bottom:-50px;
+        }
 }
 
 /* Title Area
