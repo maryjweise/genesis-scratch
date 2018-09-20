@@ -12,12 +12,32 @@
 
 //* Register front page widget areas
     genesis_register_sidebar( array(
-            'id'            => 'home-welcome',
-            'name'          => __( 'Home Welcome', 'scratch' ),
-            'description'   => __( 'This is a home widget area that will show on the front page', 'scratch' ),
+            'id'            => 'home-slider',
+            'name'          => __( 'Home Slider', 'scratch' ),
+            'description'   => __( 'Display a Slider on the front page', 'scratch' ),
     ) );
     genesis_register_sidebar( array(
-            'id'            => 'call-to-action',
-            'name'          => __( 'Call to Action', 'scratch' ),
-            'description'   => __( 'This is a call to action widget area that will show on the front page', 'scratch' ),
+            'id'            => 'home-shop',
+            'name'          => __( 'Home Shop', 'scratch' ),
+            'description'   => __( 'Display shop categories on the front page', 'scratch' ),
+    ) );
+    genesis_register_sidebar( array(
+            'id'            => 'home-blog',
+            'name'          => __( 'Home Blog', 'scratch' ),
+            'description'   => __( 'Display most recent blog post on front page with RSS widget', 'scratch' ),
+    ) );
+    genesis_register_sidebar( array(
+            'id'            => 'home-sidebar',
+            'name'          => __( 'Home Sidebar', 'scratch' ),
+            'description'   => __( 'Short sidebar to display on front page', 'scratch' ),
+    ) );
+    genesis_register_sidebar( array(
+            'id'            => 'home-about',
+            'name'          => __( 'Home About', 'scratch' ),
+            'description'   => __( 'Display short about section on front page', 'scratch' ),
+    ) );
+    genesis_register_sidebar( array(
+            'id'            => 'home-optin',
+            'name'          => __( 'Home Optin', 'scratch' ),
+            'description'   => __( 'Display full width optin on front page', 'scratch' ),
     ) );
