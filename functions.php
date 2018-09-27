@@ -83,3 +83,27 @@ function scratch_custom_logo() {
         the_custom_logo;
     endif;
 }
+
+//function for Woocommerce output
+function woocommerce_setup_genesis() {
+  woocommerce_content();
+}
+
+//* Declare WooCommerce Support
+add_theme_support( 'woocommerce' );
+
+////add genesis theme settings on Woocommerce products
+//add_post_type_support('product', 
+//        array(
+//            'genesis-layouts',
+//            'genesis-seo'
+//        )
+//    );
+
+//set all woocommerce pages to full width
+function scratch_wc_layout(){
+    if( is_page( array( 'cart', 'checkout' )) || is_shop() || get_post_type() == 'product'){
+        return 'full-width-content';
+    }
+}
+add_filter( 'genesis_site_layout', 'scratch_wc_layout');
