@@ -6,7 +6,7 @@
 	animation:         fadein 1s;
 	word-wrap: break-word;
         background-image:url('img/new-lt-blue-bg-1.jpg');
-        background-size: 100%;
+        background-size: cover;
         background-attachment: fixed;
         background-position:center;
         background-repeat:no-repeat;
@@ -26,7 +26,8 @@
 --------------------------------------------- */
 
 .site-inner {
-	@include contain;
+        width:100%;
+        background-color:#ffffff;
 }
 
 @media only screen and (min-width: 960px) {
@@ -35,8 +36,7 @@
 	--------------------------------------------- */
 
 	.site-inner {
-		margin-top: 70px;
-		max-width: 1140px;
+            
 	}
 
     /* Content

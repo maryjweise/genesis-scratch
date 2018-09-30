@@ -2,19 +2,32 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-	background-color: #fff;
-	border-top: 1px solid #eee;
-	font-size: 15px;
-	font-size: 1.5rem;
-	line-height: 1.5;
-	padding: 30px;
-	text-align: center;
-        @include contain;
+	
+        width: 100%;
+        background-color:$green;
+        
+        .wrap {
+            @include contain;
+            border-top: 1px solid #eee;
+            font-size: 15px;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            padding: 30px;
+            text-align: center;
+            color:#ffffff;
+        }
+        
+        p {
+            margin-bottom: 0;
+        }
+        
+        a {
+            color:#ffffff;
+            font-weight:700;
+            
+        }
 }
 
-.site-footer p {
-	margin-bottom: 0;
-}
 
 /*--------------------------------------------------------------
 ## Footer Widgets
