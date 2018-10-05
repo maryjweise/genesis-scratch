@@ -876,7 +876,7 @@ blockquote::before {
 /* Site Inner
 --------------------------------------------- */
 .site-inner {
-	max-width: 1140px;
+	max-width: 1200px;
 	margin: auto;
 }
 
@@ -1310,7 +1310,7 @@ img.alignright,
 /* Site Header
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
-	/*background-color: #fff;*/
+	background-color: #fff;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 	padding: 0 30px;
 	background-image: url("img/full-width-grass-short.png");
@@ -1865,6 +1865,81 @@ and open the template in the editor.
     Created on : Sep 30, 2018, 12:13:47 PM
     Author     : Mary
 */
+.home-slider {
+	max-width: 1200px;
+	margin: 30px auto 0px;
+}
+
+.home-slider .widget {
+	margin-bottom: 0px;
+}
+
+.home-slider .flexslider .slides > li {
+	margin-bottom: 0px;
+}
+
+.home-slider img {
+	min-width: 1200px;
+}
+
+.home-slider #genesis-responsive-slider {
+	padding: 0px;
+	border: 5px solid #fff;
+}
+
+.home-slider .slide-excerpt {
+	height: 320px;
+}
+
+.home-slider .slide-excerpt-border {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	position: static;
+}
+
+.home-slider .slide-excerpt-border h2 {
+	background-color: #805F9A;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.home-slider .slide-excerpt-border h2 a,
+.home-slider .slide-excerpt-border h2 a:hover,
+.home-slider .slide-excerpt-border h2 a:focus {
+	color: white;
+	text-decoration: none;
+}
+
+.home-slider .slide-excerpt-border p {
+	padding: 0px 20px 20px;
+}
+
+.home-slider .slide-excerpt-border .slider-button {
+	text-align: right;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	color: #805F9A;
+	text-decoration: none;
+	width: 100%;
+	display: inline-block;
+	position: absolute;
+	bottom: 0px;
+	font-weight: 700;
+}
+
+.home-slider .flex-control-nav a {
+	height: 11px;
+}
+
+.home-slider .flex-control-nav a.flex-active {
+	box-shadow: 0 11px rgba(0, 0, 0, 0.2) inset;
+	border-radius: 50%;
+}
+
 .home-shop .wrap {
 	display: -ms-flexbox;
 	display: flex;
@@ -1879,7 +1954,7 @@ and open the template in the editor.
 }
 
 .home-shop .wrap .widget img {
-	border: 4px solid #fff;
+	border: 5px solid #fff;
 	transition: ease 0.2s all;
 }
 
@@ -1891,7 +1966,7 @@ and open the template in the editor.
 .home .content-sidebar-wrap {
 	display: -ms-flexbox;
 	display: flex;
-	max-width: 1140px;
+	max-width: 1200px;
 	margin: 20px auto;
 	background-color: #ffffff;
 }
@@ -1905,7 +1980,7 @@ and open the template in the editor.
 }
 
 .home-about {
-	max-width: 1140px;
+	max-width: 1200px;
 	margin: 40px auto 20px;
 }
 
@@ -1922,9 +1997,9 @@ and open the template in the editor.
 
 .home-about .abouttext h4 {
 	background-color: #805F9A;
-	padding: 10px 20px;
 	color: #fff;
 	text-transform: uppercase;
+	padding: 10px 20px;
 	font-weight: 700;
 	margin-bottom: 0px;
 }
@@ -1941,7 +2016,7 @@ and open the template in the editor.
 }
 
 .home-optin {
-	max-width: 1140px;
+	max-width: 1200px;
 	margin: 20px auto;
 }
 

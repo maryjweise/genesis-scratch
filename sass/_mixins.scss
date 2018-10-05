@@ -2,3 +2,11 @@
     max-width:1200px;
     margin:0 auto;
 }
+
+@mixin titlebar {
+    background-color:$purple;
+    color:#fff;
+    text-transform:uppercase;
+    padding: 10px 20px;
+    font-weight:700;
+}
