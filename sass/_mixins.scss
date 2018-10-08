@@ -9,4 +9,14 @@
     text-transform:uppercase;
     padding: 10px 20px;
     font-weight:700;
+    
+    a {
+        color:#fff;
+        text-decoration:none;
+    }
+    a:hover,
+        a:focus {
+        color:#fff;
+        text-decoration:underline;
+    }
 }

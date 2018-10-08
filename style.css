@@ -1889,6 +1889,7 @@ and open the template in the editor.
 
 .home-slider .slide-excerpt {
 	height: 320px;
+	opacity: 1;
 }
 
 .home-slider .slide-excerpt-border {
@@ -1905,6 +1906,17 @@ and open the template in the editor.
 	padding: 10px 20px;
 	font-weight: 700;
 	font-size: 20px;
+}
+
+.home-slider .slide-excerpt-border h2 a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.home-slider .slide-excerpt-border h2 a:hover,
+.home-slider .slide-excerpt-border h2 a:focus {
+	color: #fff;
+	text-decoration: underline;
 }
 
 .home-slider .slide-excerpt-border h2 a,
@@ -1968,20 +1980,105 @@ and open the template in the editor.
 	display: flex;
 	max-width: 1200px;
 	margin: 20px auto;
-	background-color: #ffffff;
 }
 
 .home-blog {
 	margin: 20px;
+	background-color: #fff;
+}
+
+.home-blog .rss-widget-icon {
+	display: none;
+}
+
+.home-blog .widget-title {
+	background-color: #805F9A;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	font-weight: 700;
+}
+
+.home-blog .widget-title a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.home-blog .widget-title a:hover,
+.home-blog .widget-title a:focus {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.home-blog ul {
+	padding: 0px 20px;
+}
+
+.home-blog ul a.rsswidget {
+	color: #2DA753;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.home-blog ul .rss-date {
+	float: right;
+	font-size: 14px;
+	text-transform: uppercase;
+	line-height: 200%;
+	font-style: italic;
 }
 
 .home-sidebar {
 	margin: 20px;
+	background-color: #fff;
+}
+
+.home-sidebar .widget-title {
+	background-color: #805F9A;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	font-weight: 700;
+}
+
+.home-sidebar .widget-title a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.home-sidebar .widget-title a:hover,
+.home-sidebar .widget-title a:focus {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.home-sidebar .textwidget {
+	padding: 0px 20px;
+}
+
+.home-sidebar .textwidget h3.sbi_no_bio {
+	color: #805F9A;
+	font-weight: 700;
+}
+
+.home-sidebar .textwidget #sb_instagram .sbi_follow_btn a {
+	background-color: #805F9A;
+}
+
+.home-sidebar .textwidget #sb_instagram .sbi_follow_btn a:hover,
+.home-sidebar .textwidget #sb_instagram .sbi_follow_btn a:focus {
+	background-color: #805F9A;
+	text-decoration: underline;
+	box-shadow: none;
 }
 
 .home-about {
 	max-width: 1200px;
 	margin: 40px auto 20px;
+}
+
+.home-about .widget {
+	margin-bottom: 0px;
 }
 
 .home-about .textwidget {
@@ -2004,6 +2101,17 @@ and open the template in the editor.
 	margin-bottom: 0px;
 }
 
+.home-about .abouttext h4 a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.home-about .abouttext h4 a:hover,
+.home-about .abouttext h4 a:focus {
+	color: #fff;
+	text-decoration: underline;
+}
+
 .home-about .abouttext p {
 	padding: 20px;
 	background-color: #fff;
@@ -2017,7 +2125,36 @@ and open the template in the editor.
 
 .home-optin {
 	max-width: 1200px;
-	margin: 20px auto;
+	margin: 20px auto 40px;
+	background-color: #fff;
+}
+
+.home-optin .widget-title {
+	background-color: #805F9A;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	font-weight: 700;
+}
+
+.home-optin .widget-title a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.home-optin .widget-title a:hover,
+.home-optin .widget-title a:focus {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.home-optin p, .home-optin form {
+	padding: 0px 20px;
+}
+
+.home-optin form {
+	display: -ms-flexbox;
+	display: flex;
 }
 
 /*--------------------------------------------------------------

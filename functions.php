@@ -115,3 +115,11 @@ function scratch_wc_layout(){
     }
 }
 add_filter( 'genesis_site_layout', 'scratch_wc_layout');
+
+//Change copyright 
+function scratch_footer_creds_text() {
+    $copyright = '<div class="creds"><p>Copyright &copy; ' . date('Y') . ' <a href="https://candiedfabrics.com/" target="_blank">Candied Fabrics</a> | Designed &amp; Built By <a href="https://marydoesdev.com/" target="_blank">Mary Does Dev</a></p></div>';
+    return $copyright;
+    
+}
+add_filter('genesis_footer_creds_text' , 'scratch_footer_creds_text' );

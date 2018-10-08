@@ -28,6 +28,7 @@ and open the template in the editor.
     }
     .slide-excerpt {
         height:320px;
+        opacity:1;
     }
     .slide-excerpt-border {
         border:0px;
@@ -111,23 +112,73 @@ and open the template in the editor.
     display:flex;
     max-width: 1200px;
     margin:20px auto;
-    background-color:#ffffff;
+
 }
 .home-blog {
     margin:20px;
+    background-color:#fff;
     
+    .rss-widget-icon {
+        display:none;
+    }
+    
+    .widget-title {
+        @include titlebar;
+    }
+    ul {
+        padding:0px 20px;
+        
+        a.rsswidget {
+            color:$green;
+            font-weight:700;
+            text-transform:uppercase;
+        }
+        .rss-date {
+            float:right;
+            font-size:14px;
+            text-transform:uppercase;
+            line-height:200%;
+            font-style:italic;
+            
+        }
+    }
     
 }
 .home-sidebar {
     margin:20px;
+    background-color: #fff;
     
+    .widget-title {
+        @include titlebar;
+    }
     
+    .textwidget {
+        padding:0px 20px;
+        
+        h3.sbi_no_bio {
+            color:$purple;
+            font-weight:700;
+        }
+        #sb_instagram .sbi_follow_btn a {
+            background-color:$purple;
+        }
+        #sb_instagram .sbi_follow_btn a:hover,
+        #sb_instagram .sbi_follow_btn a:focus {
+            background-color:$purple;
+            text-decoration:underline;
+            box-shadow: none;
+        }
+    }
 }
 
 .home-about {
     
     max-width: 1200px;
     margin:40px auto 20px;
+    
+    .widget {
+        margin-bottom:0px;
+    }
     
     .textwidget {
         
@@ -165,6 +216,19 @@ and open the template in the editor.
 .home-optin {
     
     max-width: 1200px;
-    margin:20px auto;
+    margin:20px auto 40px;
+    background-color:#fff;
+    
+    .widget-title {
+        @include titlebar;
+    }
+    
+    p, form {
+        padding:0px 20px;
+    }
+    
+    form {
+        display:flex;
+    }
     
 }
