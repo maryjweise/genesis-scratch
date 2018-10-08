@@ -2224,12 +2224,11 @@ and open the template in the editor.
 /* Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 .footer-widgets {
-	border-top: 1px solid #eee;
-	background-color: #fff;
+	background-color: #2DA753;
 	clear: both;
 	font-size: 18px;
 	font-size: 1.8rem;
-	padding: 60px 0;
+	padding: 40px 0 10px;
 }
 
 .footer-widgets .wrap {
@@ -2257,10 +2256,66 @@ and open the template in the editor.
 	.footer-widget-area {
 		float: left;
 		margin-bottom: 0;
-		width: 33.33%;
+		width: 50%;
 		/* fallback for older browsers */
-		width: calc(100% / 3);
+		width: calc(100% / 2);
 	}
+}
+
+/*--------------------------------------------------------------
+## Footer Newsletter Opt-in Widget
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Footer Newsletter Opt-in Widget
+--------------------------------------------------------------*/
+#enews-ext-2 {
+	color: #333;
+	background-color: #fff;
+}
+
+#enews-ext-2 h3 {
+	background-color: #805F9A;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	font-weight: 700;
+}
+
+#enews-ext-2 h3 a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#enews-ext-2 h3 a:hover,
+#enews-ext-2 h3 a:focus {
+	color: #fff;
+	text-decoration: underline;
+}
+
+#enews-ext-2 p {
+	padding: 0px 20px;
+}
+
+#enews-ext-2 form {
+	display: -ms-flexbox;
+	display: flex;
+	padding: 0px 20px 20px;
+}
+
+#enews-ext-2 form input {
+	margin-bottom: 0px;
+}
+
+#enews-ext-2 form input#subbox {
+	-ms-flex: 2;
+	    flex: 2;
+	margin-right: 20px;
+}
+
+#enews-ext-2 form input[type="submit"] {
+	-ms-flex: 1;
+	    flex: 1;
+	background-color: #805F9A;
 }
 
 /*# sourceMappingURL=../scratch/sass/maps/style.css.map */

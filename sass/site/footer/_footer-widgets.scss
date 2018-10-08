@@ -2,12 +2,11 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-	border-top: 1px solid #eee;
-	background-color: #fff;
+	background-color: $green;
 	clear: both;
 	font-size: 18px;
 	font-size: 1.8rem;
-	padding: 60px 0;
+	padding: 40px 0 10px;
 }
 
 .footer-widgets .wrap {
@@ -38,8 +37,13 @@
 	.footer-widget-area {
 		float: left;
 		margin-bottom: 0;
-		width: 33.33%; /* fallback for older browsers */
-		width: calc(100% / 3);
+		width: 50%; /* fallback for older browsers */
+		width: calc(100% / 2);
 	}
 
 }
+
+/*--------------------------------------------------------------
+## Footer Newsletter Opt-in Widget
+--------------------------------------------------------------*/
+@import "footer-optin";

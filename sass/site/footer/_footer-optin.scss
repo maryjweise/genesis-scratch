@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+## Footer Newsletter Opt-in Widget
+--------------------------------------------------------------*/
+
+#enews-ext-2 {
+
+    color:#333;
+    background-color:#fff;
+    
+    h3 {
+        @include titlebar;
+    }
+    p {
+        padding:0px 20px;
+    }
+    form {
+    
+        display:flex;
+        padding:0px 20px 20px;
+        input {
+            margin-bottom:0px;
+        }
+        input#subbox {
+            flex:2;
+            margin-right:20px;
+        }
+
+        input[type="submit"] {
+            flex:1;
+            background-color:$purple;
+        }
+    }
+}
+
+
+

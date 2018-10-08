@@ -51,7 +51,7 @@ function scratch_setup(){
     );
     
     // Add theme support for footer widgets
-    add_theme_support( 'genesis-footer-widgets', 3);
+    add_theme_support( 'genesis-footer-widgets', 2);
     
     // Add theme support for custom logo
     add_theme_support( 'custom-logo' );
