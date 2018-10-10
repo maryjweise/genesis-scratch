@@ -19,25 +19,31 @@
 	display: block;
 	font-size: 15px;
 	font-size: 1.5rem;
-	font-weight: 400;
+	font-weight: 700;
 	outline-offset: -1px;
 	padding-bottom: 12px;
 	padding-top: 12px;
 	text-decoration: none;
+        text-transform:uppercase;
 }
 
 .genesis-nav-menu a:focus,
 .genesis-nav-menu a:hover,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
-.genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: #0073e5;
+.genesis-nav-menu .sub-menu .current-menu-item > a:hover,
+.genesis-nav-menu .sfHover a,
+.genesis-nav-menu .sfHover a,{
+	color: white;
 	text-decoration: none;
+        background-color:$purple;
+        border-radius:4px;
 }
 
 .genesis-nav-menu .sub-menu,
 .genesis-nav-menu .sub-menu a {
 	width: 100%;
+        border-radius:0px;
 }
 
 .genesis-nav-menu .sub-menu {
@@ -51,12 +57,22 @@
 	z-index: 99;
 }
 
+.genesis-nav-menu .sub-menu li {
+        width:100%;
+        min-width:100px;
+}
+
 .genesis-nav-menu .sub-menu a {
-	background-color: #fff;
+	background-color: $purple;
 	font-size: 14px;
 	font-size: 1.4rem;
 	position: relative;
 	word-wrap: break-word;
+        display:block;
+}
+
+.genesis-nav-menu .sub-menu .menu-item:hover a, .genesis-nav-menu .sub-menu .menu-item:focus a{
+        text-decoration:underline;
 }
 
 .genesis-nav-menu .menu-item:focus,
@@ -108,15 +124,15 @@
 	}
 
 	.genesis-nav-menu .sub-menu {
-		border-top: 1px solid #eee;
-		opacity: 0;
+		
+		opacity: 1;
 		padding-left: 0;
 		position: absolute;
-		transition: opacity .4s ease-in-out;
+                min-width:100px;
+		/*transition: all .2s ease;*/
 	}
 
 	.genesis-nav-menu .sub-menu a {
-		border: 1px solid #eee;
 		border-top: 0;
 		padding-bottom: 15px;
 		padding-top: 15px;
@@ -142,6 +158,11 @@
 ## Pagination
 --------------------------------------------------------------*/
 @import "pagination";
+
+/*--------------------------------------------------------------
+## Social Menu
+--------------------------------------------------------------*/
+@import "social-menu";
 
 /*--------------------------------------------------------------
 ## Footer Menu

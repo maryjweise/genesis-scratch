@@ -6,9 +6,20 @@
 	width: 100%;
         background-color:$green;
         color:#ffffff;
+        
+        #menu-header-menu {
+            margin-top:10px;
+            margin-bottom:10px;
+        }
+        
         a {
             color:#ffffff;
             text-transform:uppercase;
+        }
+        
+        .menu-item-has-children a {
+            border-bottom-left-radius:0px;
+            border-bottom-right-radius:0px;
         }
 }
 

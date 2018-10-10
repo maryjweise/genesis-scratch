@@ -88,6 +88,7 @@ and open the template in the editor.
          
             justify-content: center;
             padding:15px;
+            margin-bottom:0px;
             
             img {
              
@@ -141,6 +142,9 @@ and open the template in the editor.
             font-style:italic;
             
         }
+        li {
+            margin-bottom:20px;
+        }
     }
     
 }
@@ -174,7 +178,7 @@ and open the template in the editor.
 .home-about {
     
     max-width: 1200px;
-    margin:40px auto 20px;
+    margin:20px auto;
     
     .widget {
         margin-bottom:0px;

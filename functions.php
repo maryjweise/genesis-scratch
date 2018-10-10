@@ -65,7 +65,7 @@ function scratch_setup(){
     unregister_sidebar( 'sidebar-alt' );
     
     // Add theme widget areas
-    include_once( get_stylesheet_directory() . '/includes/widget-areas.php' );
+    include_once( get_stylesheet_directory() . '/inc/widget-areas.php' );
 }
 
 // Add Google fonts stylesheet
@@ -81,6 +81,7 @@ function scratch_enqueue_scripts(){
     if(is_home()){
         wp_enqueue_script( 'scratch-home' , get_stylesheet_directory_uri() . '/js/scratch-home.js', array('jquery'), '', true );   
     }
+    wp_enqueue_script( 'scratch-functions', get_stylesheet_directory_uri() . '/js/functions.js', array('jquery'), '20181009', true );
 }
 
 // Add logo areas in site header
@@ -123,3 +124,78 @@ function scratch_footer_creds_text() {
     
 }
 add_filter('genesis_footer_creds_text' , 'scratch_footer_creds_text' );
+
+//* Make Font Awesome available
+add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
+function enqueue_font_awesome() {
+
+	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' );
+}
+
+/**
+ * Place a cart icon with number of items and total cost in the menu bar.
+ *
+ * Source: http://wordpress.org/plugins/woocommerce-menu-bar-cart/
+ */
+add_filter('wp_nav_menu_items','sk_wcmenucart', 10, 2);
+function sk_wcmenucart($menu, $args) {
+
+	// Check if WooCommerce is active and add a new item to a menu assigned to Primary Navigation Menu location
+	if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) || 'primary' !== $args->theme_location )
+		return $menu;
+
+	ob_start();
+		global $woocommerce;
+		$viewing_cart = __('View your shopping cart', 'scratch');
+		$start_shopping = __('Start shopping', 'scratch');
+		$cart_url = $woocommerce->cart->get_cart_url();
+		$shop_page_url = get_permalink( woocommerce_get_page_id( 'shop' ) );
+		$cart_contents_count = $woocommerce->cart->cart_contents_count;
+		$cart_contents = sprintf(_n('%d item', '%d items', $cart_contents_count, 'scratch'), $cart_contents_count);
+		$cart_total = $woocommerce->cart->get_cart_total();
+		// Uncomment the line below to hide nav menu cart item when there are no items in the cart
+		// if ( $cart_contents_count > 0 ) {
+			if ($cart_contents_count == 0) {
+				$menu_item = '<li class="menu-item"><a class="wcmenucart-contents" href="'. $shop_page_url .'" title="'. $start_shopping .'">';
+			} else {
+				$menu_item = '<li class="menu-item"><a class="wcmenucart-contents" href="'. $cart_url .'" title="'. $viewing_cart .'">';
+			}
+
+			$menu_item .= '<i class="fa fa-shopping-cart"></i> ';
+
+			$menu_item .= $cart_contents.' - '. $cart_total;
+			$menu_item .= '</a></li>';
+		// Uncomment the line below to hide nav menu cart item when there are no items in the cart
+		// }
+		echo $menu_item;
+	$social = ob_get_clean();
+	return $menu . $social;
+
+}
+
+/**
+ * Register menu locations with Genesis
+ *
+ * @author Reasons to Use Genesis
+ * @link http://reasonstousegenesis.com/genesis-menus/
+ */
+add_theme_support( 'genesis-menus', array(
+	'primary'   => __( 'Primary Navigation Menu', 'genesis' ),
+	'social'    => __( 'Footer Social Menu', 'genesis' ),
+	'footer'    => __( 'Footer Navigation Menu', 'genesis' )
+) );
+
+// Output social and footer menus in footer file
+
+add_action('genesis_footer', 'scratch_add_footer_menus');
+
+function scratch_add_footer_menus() {
+    genesis_nav_menu( array( 'theme_location' => 'social' ) );
+    genesis_nav_menu( array( 'theme_location' => 'footer' ) );
+}
+
+
+/**
+ * Load SVG icon functions.
+ */
+require get_stylesheet_directory() . '/inc/icon-functions.php';

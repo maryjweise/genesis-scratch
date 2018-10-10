@@ -1147,6 +1147,53 @@ img.alignright,
 	margin: 0 0 30px;
 }
 
+/*--------------------------------------------------------------
+## SVG Icons
+--------------------------------------------------------------*/
+/* SVG Icons base styles */
+.icon {
+	display: inline-block;
+	fill: currentColor;
+	height: 1em;
+	position: relative;
+	/* Align more nicely with capital letters */
+	top: -0.0625em;
+	vertical-align: middle;
+	width: 1em;
+}
+
+/*--------------------------------------------------------------
+SVG Fallbacks
+--------------------------------------------------------------*/
+.svg-fallback {
+	display: none;
+}
+
+.no-svg .svg-fallback {
+	display: inline-block;
+}
+
+/* Social Menu fallbacks */
+.no-svg .nav-social a {
+	height: auto;
+	width: auto;
+}
+
+.svg .nav-social li a span {
+	display: none;
+}
+
+.no-svg .nav-social li a span {
+	clip: auto;
+	font-size: 16px !important;
+	font-size: 1rem;
+	font-weight: 400;
+	height: auto;
+	position: relative !important;
+	/* overrides previous !important styles */
+	width: auto;
+}
+
 /*------------------------------------------------------------------------------
 # Widgets
 ------------------------------------------------------------------------------*/
@@ -1404,25 +1451,31 @@ img.alignright,
 	display: block;
 	font-size: 15px;
 	font-size: 1.5rem;
-	font-weight: 400;
+	font-weight: 700;
 	outline-offset: -1px;
 	padding-bottom: 12px;
 	padding-top: 12px;
 	text-decoration: none;
+	text-transform: uppercase;
 }
 
 .genesis-nav-menu a:focus,
 .genesis-nav-menu a:hover,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
-.genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: #0073e5;
+.genesis-nav-menu .sub-menu .current-menu-item > a:hover,
+.genesis-nav-menu .sfHover a,
+.genesis-nav-menu .sfHover a {
+	color: white;
 	text-decoration: none;
+	background-color: #805F9A;
+	border-radius: 4px;
 }
 
 .genesis-nav-menu .sub-menu,
 .genesis-nav-menu .sub-menu a {
 	width: 100%;
+	border-radius: 0px;
 }
 
 .genesis-nav-menu .sub-menu {
@@ -1436,12 +1489,22 @@ img.alignright,
 	z-index: 99;
 }
 
+.genesis-nav-menu .sub-menu li {
+	width: 100%;
+	min-width: 100px;
+}
+
 .genesis-nav-menu .sub-menu a {
-	background-color: #fff;
+	background-color: #805F9A;
 	font-size: 14px;
 	font-size: 1.4rem;
 	position: relative;
 	word-wrap: break-word;
+	display: block;
+}
+
+.genesis-nav-menu .sub-menu .menu-item:hover a, .genesis-nav-menu .sub-menu .menu-item:focus a {
+	text-decoration: underline;
 }
 
 .genesis-nav-menu .menu-item:focus,
@@ -1485,14 +1548,13 @@ img.alignright,
 		width: 180px;
 	}
 	.genesis-nav-menu .sub-menu {
-		border-top: 1px solid #eee;
-		opacity: 0;
+		opacity: 1;
 		padding-left: 0;
 		position: absolute;
-		transition: opacity .4s ease-in-out;
+		min-width: 100px;
+		/*transition: all .2s ease;*/
 	}
 	.genesis-nav-menu .sub-menu a {
-		border: 1px solid #eee;
 		border-top: 0;
 		padding-bottom: 15px;
 		padding-top: 15px;
@@ -1514,9 +1576,19 @@ img.alignright,
 	color: #ffffff;
 }
 
+.nav-primary #menu-header-menu {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 .nav-primary a {
 	color: #ffffff;
 	text-transform: uppercase;
+}
+
+.nav-primary .menu-item-has-children a {
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
 }
 
 @media only screen and (min-width: 960px) {
@@ -1673,26 +1745,48 @@ img.alignright,
 }
 
 /*--------------------------------------------------------------
+## Social Menu
+--------------------------------------------------------------*/
+/* Social Menu
+--------------------------------------------- */
+.nav-social a {
+	margin: 0px 10px;
+	padding: 5px;
+}
+
+.nav-social .icon {
+	width: 1.5em;
+	height: 1.5em;
+}
+
+/*--------------------------------------------------------------
 ## Footer Menu
 --------------------------------------------------------------*/
 /* Footer Menu
 --------------------------------------------- */
-.nav-secondary {
+.nav-footer {
 	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
-.nav-secondary .genesis-nav-menu {
+.nav-footer .genesis-nav-menu {
 	line-height: 1.5;
 }
 
-.nav-secondary .menu-item {
+.nav-footer .menu-item {
 	display: inline-block;
 }
 
-.nav-secondary a {
-	margin-left: 10px;
-	margin-right: 10px;
-	padding: 0;
+.nav-footer li + li {
+	border-left: 1px solid #fff;
+}
+
+.nav-footer a {
+	margin-left: 15px;
+	margin-right: 15px;
+	padding: 5px 10px;
+	line-height: 100%;
+	text-transform: uppercase;
 }
 
 /*--------------------------------------------------------------
@@ -1963,6 +2057,7 @@ and open the template in the editor.
 	-ms-flex-pack: center;
 	    justify-content: center;
 	padding: 15px;
+	margin-bottom: 0px;
 }
 
 .home-shop .wrap .widget img {
@@ -2028,6 +2123,10 @@ and open the template in the editor.
 	font-style: italic;
 }
 
+.home-blog ul li {
+	margin-bottom: 20px;
+}
+
 .home-sidebar {
 	margin: 20px;
 	background-color: #fff;
@@ -2074,7 +2173,7 @@ and open the template in the editor.
 
 .home-about {
 	max-width: 1200px;
-	margin: 40px auto 20px;
+	margin: 20px auto;
 }
 
 .home-about .widget {
@@ -2224,11 +2323,11 @@ and open the template in the editor.
 /* Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 .footer-widgets {
-	background-color: #2DA753;
+	/*background-color: $green;*/
 	clear: both;
 	font-size: 18px;
 	font-size: 1.8rem;
-	padding: 40px 0 10px;
+	padding: 0px 0 40px;
 }
 
 .footer-widgets .wrap {
