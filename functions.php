@@ -119,7 +119,7 @@ add_filter( 'genesis_site_layout', 'scratch_wc_layout');
 
 //Change copyright 
 function scratch_footer_creds_text() {
-    $copyright = '<div class="creds"><p>Copyright &copy; ' . date('Y') . ' <a href="https://candiedfabrics.com/" target="_blank">Candied Fabrics</a> | Designed &amp; Built By <a href="https://marydoesdev.com/" target="_blank">Mary Does Dev</a></p></div>';
+    $copyright = '<div class="creds"><p>&copy; ' . date('Y') . ' <a href="https://candiedfabrics.com/" target="_blank">Candied Fabrics</a> | Designed &amp; Built By <a href="https://marydoesdev.com/" target="_blank">Mary Does Dev</a></p></div>';
     return $copyright;
     
 }
@@ -199,3 +199,55 @@ function scratch_add_footer_menus() {
  * Load SVG icon functions.
  */
 require get_stylesheet_directory() . '/inc/icon-functions.php';
+
+/**********************************
+*
+* Integrate WooCommerce with Genesis.
+*
+* Unhook WooCommerce wrappers and
+* Replace with Genesis wrappers.
+*
+* Reference Genesis file:
+* genesis/lib/framework.php
+*
+* @author AlphaBlossom / Tony Eppright
+* @link http://www.alphablossom.com
+*
+**********************************/
+// Add WooCommerce support for Genesis layouts (sidebar, full-width, etc) - Thank you Kelly Murray/David Wang
+add_post_type_support( 'product', array( 'genesis-layouts', 'genesis-seo' ) );
+// Unhook WooCommerce Sidebar - use Genesis Sidebars instead
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+// Unhook WooCommerce wrappers
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
+// Hook new functions with Genesis wrappers
+add_action( 'woocommerce_before_main_content', 'scratch_my_theme_wrapper_start', 10 );
+add_action( 'woocommerce_after_main_content', 'scratch_my_theme_wrapper_end', 10 );
+// Add opening wrapper before WooCommerce loop
+function scratch_my_theme_wrapper_start() {
+ do_action( 'genesis_before_content_sidebar_wrap' );
+ genesis_markup( array(
+ 'html5' => '<div %s>',
+ 'xhtml' => '<div id="content-sidebar-wrap">',
+ 'context' => 'content-sidebar-wrap',
+ ) );
+ do_action( 'genesis_before_content' );
+ genesis_markup( array(
+ 'html5' => '<main %s>',
+ 'xhtml' => '<div id="content" class="hfeed">',
+ 'context' => 'content',
+ ) );
+ do_action( 'genesis_before_loop' );
+}
+/* Add closing wrapper after WooCommerce loop */
+function scratch_my_theme_wrapper_end() {
+ do_action( 'genesis_after_loop' );
+ genesis_markup( array(
+ 'html5' => '</main>', //* end .content
+ 'xhtml' => '</div>', //* end #content
+ ) );
+ do_action( 'genesis_after_content' );
+ echo '</div>'; //* end .content-sidebar-wrap or #content-sidebar-wrap
+ do_action( 'genesis_after_content_sidebar_wrap' );
+}

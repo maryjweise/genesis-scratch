@@ -1,8 +1,11 @@
 /* Social Menu
 --------------------------------------------- */
 
+.nav-social {
+    min-width:150px;
+    flex:1;
+}
 .nav-social a {
-    margin:0px 10px;
     padding:5px;
 }
 .nav-social .icon {

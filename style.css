@@ -1194,6 +1194,207 @@ SVG Fallbacks
 	width: auto;
 }
 
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+	color: #805F9A;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #2DA753;
+	text-decoration: none;
+}
+
+/*------------------------------------------------------------------------------
+# Woocommerce Styles
+------------------------------------------------------------------------------*/
+.woocommerce .woocommerce-breadcrumb a {
+	color: #805F9A;
+}
+
+.woocommerce .woocommerce-breadcrumb a:hover, .woocommerce .woocommerce-breadcrumb a:focus {
+	text-decoration: underline;
+	color: #805F9A;
+}
+
+.woocommerce ul.products li.product .price {
+	color: #2DA753 !important;
+}
+
+/*------------------------------------------------------------------------------
+# Product Archives
+------------------------------------------------------------------------------*/
+.archive .site-inner {
+	background-color: #fff;
+	padding: 30px;
+}
+
+.archive .site-inner .content-sidebar-wrap {
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.archive .site-inner .content-sidebar-wrap .shop-sidebar {
+	-ms-flex: 1;
+	    flex: 1;
+	padding-right: 30px;
+}
+
+.archive .site-inner .content-sidebar-wrap .content {
+	-ms-flex: 4;
+	    flex: 4;
+}
+
+.archive .site-inner .content-sidebar-wrap .content .archive-description {
+	display: none;
+}
+
+.archive .site-inner .content-sidebar-wrap .content .products .button {
+	background-color: #805F9A;
+	border-radius: 4px;
+	color: #fff;
+	transition: all 0.2s ease;
+	border: 2px solid #fff;
+}
+
+.archive .site-inner .content-sidebar-wrap .content .products .button:hover, .archive .site-inner .content-sidebar-wrap .content .products .button:focus {
+	border: 2px solid #805F9A;
+	background-color: #805F9A;
+	color: #fff;
+	text-decoraton: underline;
+}
+
+.archive .site-inner .content-sidebar-wrap .content .products li.product {
+	padding: 10px;
+}
+
+.archive .site-inner .content-sidebar-wrap .content .products li.product:hover, .archive .site-inner .content-sidebar-wrap .content .products li.product:focus {
+	background-color: #f1f1f1;
+}
+
+.archive .site-inner .content-sidebar-wrap .content .woocommerce-ordering select {
+	padding: 10px;
+}
+
+/*------------------------------------------------------------------------------
+# Single Products
+------------------------------------------------------------------------------*/
+.woocommerce.single-product .content {
+	width: 100%;
+	padding: 30px;
+	background-color: #fff;
+}
+
+.woocommerce.single-product input.qty {
+	padding: 10px;
+}
+
+.woocommerce.single-product button.single_add_to_cart_button.alt {
+	background-color: #805F9A;
+	border: 2px solid #fff;
+	transition: all 0.2s ease;
+	border-radius: 4px;
+}
+
+.woocommerce.single-product button.single_add_to_cart_button.alt:hover, .woocommerce.single-product button.single_add_to_cart_button.alt:focus {
+	border: 2px solid #805F9A;
+	background-color: #805F9A;
+}
+
+.woocommerce.single-product div.product p.price,
+.woocommerce.single-product div.product span.price,
+.woocommerce.single-product .product .stock {
+	color: #2DA753;
+}
+
+.woocommerce.single-product .related.products a.button {
+	background-color: #805F9A;
+	color: #fff;
+	border: 2px solid #fff;
+	transition: all 0.2s ease;
+	border-radius: 4px;
+}
+
+.woocommerce.single-product .related.products a.button:hover, .woocommerce.single-product .related.products a.button:focus {
+	background-color: #805F9A;
+	border: 2px solid #805F9A;
+}
+
+/*------------------------------------------------------------------------------
+# Shop Sidebar
+------------------------------------------------------------------------------*/
+.woocommerce ul.product_list_widget li img {
+	float: none !important;
+	display: block;
+	width: 100% !important;
+	margin-left: 0px !important;
+}
+
+.woocommerce-product-search {
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.woocommerce-product-search input {
+	padding: 10px 15px;
+}
+
+.woocommerce-product-search button {
+	padding: 10px 15px;
+}
+
+.woocommerce-product-search button:hover, .woocommerce-product-search button:focus {
+	background-color: #805F9A;
+}
+
+.dropdown_product_cat {
+	padding: 10px;
+}
+
+/*------------------------------------------------------------------------------
+# Woocommerce Cart
+------------------------------------------------------------------------------*/
+.woocommerce-cart .content {
+	padding: 30px;
+	background-color: #fff;
+}
+
+.woocommerce-cart #coupon_code {
+	width: 50%;
+}
+
+.woocommerce-cart .woocommerce a.button.alt {
+	background-color: #805F9A;
+	border: 2px solid #fff;
+	transition: all 0.2s ease;
+	color: #fff;
+	border-radius: 4px;
+}
+
+.woocommerce-cart .woocommerce a.button.alt:hover, .woocommerce-cart .woocommerce a.button.alt:focus {
+	background-color: #805F9A;
+	border-color: #805F9A;
+	color: #fff;
+}
+
+/*------------------------------------------------------------------------------
+# Woocommerce Checkout
+------------------------------------------------------------------------------*/
+.woocommerce-checkout .content {
+	padding: 30px;
+	background-color: #fff;
+}
+
+.woocommerce-checkout .woocommerce-info {
+	border-top-color: #2DA753;
+}
+
+.woocommerce-checkout .woocommerce-info::before {
+	color: #2DA753;
+}
+
 /*------------------------------------------------------------------------------
 # Widgets
 ------------------------------------------------------------------------------*/
@@ -1586,9 +1787,18 @@ SVG Fallbacks
 	text-transform: uppercase;
 }
 
-.nav-primary .menu-item-has-children a {
+.nav-primary a:hover, .nav-primary a:focus {
+	color: #fff;
+}
+
+.nav-primary .menu-item-has-children.sfHover a {
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
+}
+
+.nav-primary .menu-item-has-children li:last-child a, .nav-primary .sub-menu {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
 }
 
 @media only screen and (min-width: 960px) {
@@ -1749,8 +1959,13 @@ SVG Fallbacks
 --------------------------------------------------------------*/
 /* Social Menu
 --------------------------------------------- */
+.nav-social {
+	min-width: 150px;
+	-ms-flex: 1;
+	    flex: 1;
+}
+
 .nav-social a {
-	margin: 0px 10px;
 	padding: 5px;
 }
 
@@ -1765,28 +1980,28 @@ SVG Fallbacks
 /* Footer Menu
 --------------------------------------------- */
 .nav-footer {
-	margin-top: 10px;
-	margin-bottom: 20px;
+	margin-top: 4px;
+	-ms-flex: 5;
+	    flex: 5;
 }
 
 .nav-footer .genesis-nav-menu {
 	line-height: 1.5;
+	text-align: left;
 }
 
 .nav-footer .menu-item {
 	display: inline-block;
 }
 
-.nav-footer li + li {
-	border-left: 1px solid #fff;
-}
-
 .nav-footer a {
-	margin-left: 15px;
-	margin-right: 15px;
-	padding: 5px 10px;
+	padding: 5px;
 	line-height: 100%;
 	text-transform: uppercase;
+}
+
+.nav-footer a:hover, .nav-footer a:focus {
+	color: #805F9A;
 }
 
 /*--------------------------------------------------------------
@@ -2303,18 +2518,44 @@ and open the template in the editor.
 	font-size: 15px;
 	font-size: 1.5rem;
 	line-height: 1.5;
-	padding: 30px;
+	padding: 20px 0px;
 	text-align: center;
 	color: #ffffff;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 .site-footer p {
 	margin-bottom: 0;
 }
 
+.site-footer .genesis-nav-menu a:focus,
+.site-footer .genesis-nav-menu a:hover,
+.site-footer .genesis-nav-menu .current-menu-item > a,
+.site-footer .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
+.site-footer .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
+	background-color: transparent;
+	color: #805F9A;
+}
+
+.site-footer li:hover a,
+.site-footer li:focus a {
+	color: #805F9A;
+}
+
 .site-footer a {
 	color: #ffffff;
 	font-weight: 700;
+}
+
+.site-footer a:hover, .site-footer a:focus {
+	color: #805F9A;
+}
+
+.site-footer .creds {
+	-ms-flex: 4;
+	    flex: 4;
+	margin-top: 6px;
 }
 
 /*--------------------------------------------------------------

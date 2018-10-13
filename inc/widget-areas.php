@@ -41,3 +41,8 @@
             'name'          => __( 'Home Optin', 'scratch' ),
             'description'   => __( 'Display full width optin on front page', 'scratch' ),
     ) );
+    genesis_register_sidebar( array(
+            'id'            => 'shop-sidebar',
+            'name'          => __( 'Shop Sidebar', 'scratch' ),
+            'description'   => __( 'Shop filter and category options', 'scratch' ),
+    ) );

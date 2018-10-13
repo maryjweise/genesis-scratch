@@ -1,0 +1,57 @@
+.archive {
+    
+    
+    .site-inner {
+        background-color:#fff;
+        padding:30px;
+        
+        .content-sidebar-wrap {
+            
+            display:flex;
+            
+            .shop-sidebar {
+                flex:1;
+                padding-right:30px;
+            }
+
+            .content {
+                flex:4;
+                
+                .archive-description {
+                    display:none;
+                }
+                
+                .products {
+                    .button {
+                        background-color:$purple;
+                        border-radius:4px;
+                        color:#fff;
+                        transition:all 0.2s ease;
+                        border:2px solid #fff;
+
+                        &:hover,
+                            &:focus {
+                            border:2px solid $purple;
+                            background-color:$purple;
+                            color:#fff;
+                            text-decoraton:underline;
+                        }
+                    }
+                    li.product {
+                        padding:10px;
+                        
+                        &:hover,
+                            &:focus {
+                            background-color:#f1f1f1
+                        }
+                    }
+                }
+                
+                .woocommerce-ordering select {
+                    padding:10px;
+                }
+            }      
+        }
+
+    }
+}

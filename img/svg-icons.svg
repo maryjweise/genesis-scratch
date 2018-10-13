@@ -150,5 +150,8 @@
 <symbol id="icon-arrow-long-left" viewBox="0 0 20 20">
 <path d="M0.75 10l5.25-5.5v3.5h13v4h-13v3.5l-5.25-5.5z"></path>
 </symbol>
+<symbol id="icon-house" viewBox="0 0 32 32">
+<path d="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z"></path>
+</symbol>
 </defs>
 </svg>

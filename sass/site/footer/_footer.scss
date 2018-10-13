@@ -11,19 +11,39 @@
             font-size: 15px;
             font-size: 1.5rem;
             line-height: 1.5;
-            padding: 30px;
+            padding: 20px 0px;
             text-align: center;
             color:#ffffff;
+            display:flex;
         }
         
         p {
             margin-bottom: 0;
         }
-        
+        .genesis-nav-menu a:focus,
+        .genesis-nav-menu a:hover,
+        .genesis-nav-menu .current-menu-item > a,
+        .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
+        .genesis-nav-menu .sub-menu .current-menu-item > a:hover, {
+            background-color:transparent;
+            color:$purple;
+        }
+        li:hover a,
+        li:focus a {
+            color:$purple;
+        }
         a {
             color:#ffffff;
             font-weight:700;
             
+            &:hover, 
+                &:focus {
+                color:$purple;
+            }
+        }
+        .creds {
+            flex:4;
+            margin-top:6px;
         }
 }
 

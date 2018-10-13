@@ -1,0 +1,10 @@
+a {
+    color:$purple;
+    text-decoration:none;
+   
+    &:hover,
+        &:focus {
+        color:$green;
+        text-decoration:none;
+    }
+}

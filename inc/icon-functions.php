@@ -194,3 +194,14 @@ function scratch_social_links_icons() {
 	 */
 	return apply_filters( 'scratch_social_links_icons', $social_links_icons );
 }
+
+// define the woocommerce_breadcrumb_main_term callback 
+function filter_woocommerce_breadcrumb_main_term( $terms_0, $terms ) { 
+    if($terms_0 === 'Home'):
+        $terms_0 = str_replace($terms_0->content, '</span>' . scratch_get_svg(array('icon' => 'home')), $terms_0);
+    endif;
+    return $terms_0; 
+}; 
+         
+// add the filter 
+add_filter( 'woocommerce_breadcrumb_main_term', 'filter_woocommerce_breadcrumb_main_term', 10, 2 ); 

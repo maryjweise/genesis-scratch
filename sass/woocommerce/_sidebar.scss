@@ -1,0 +1,27 @@
+.woocommerce ul.product_list_widget li img {
+    float:none!important;
+    display:block;
+    width:100%!important;
+    margin-left:0px!important;
+}
+.woocommerce-product-search {
+    display:flex;
+    
+    input {
+        padding:10px 15px;
+    }
+    
+    button{
+        
+        padding:10px 15px;
+        
+        &:hover,
+            &:focus {
+            background-color:$purple;
+        }
+    }
+}
+
+.dropdown_product_cat {
+    padding:10px;
+}

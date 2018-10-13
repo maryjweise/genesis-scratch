@@ -1,0 +1,43 @@
+.woocommerce.single-product {
+    
+    .content {
+        width:100%;
+        padding:30px;
+        background-color:#fff;
+    }
+    
+    input.qty{
+        padding:10px;
+    }
+    button.single_add_to_cart_button.alt {
+        background-color:$purple;
+        border:2px solid #fff;
+        transition:all 0.2s ease;
+        border-radius:4px;
+        
+        &:hover,
+            &:focus {
+            border:2px solid $purple;
+            background-color:$purple;
+        }
+    }
+    div.product p.price,
+    div.product span.price,
+    .product .stock {
+        color:$green;
+    }
+    
+    .related.products a.button {
+        background-color:$purple;
+        color:#fff;
+        border:2px solid #fff;
+        transition:all 0.2s ease;
+        border-radius:4px;
+        
+        &:hover,
+            &:focus {
+            background-color:$purple;
+            border:2px solid $purple;
+        }
+    }
+}

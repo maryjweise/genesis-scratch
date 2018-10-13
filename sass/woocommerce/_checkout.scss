@@ -1,0 +1,14 @@
+.woocommerce-checkout {
+    .content {
+        
+        padding:30px;
+        background-color:#fff;
+        
+    }
+    .woocommerce-info{
+        border-top-color: $green;
+    } 
+    .woocommerce-info::before {
+        color:$green;
+    }
+}
