@@ -22,6 +22,7 @@
         }
 }
 
+
 /* Title Area
 --------------------------------------------- */
 
@@ -62,6 +63,9 @@
 	width: 1px;
 	word-wrap: normal !important;
 }
+
+
+
 @media only screen and (min-width: 960px) {
     
     /* Site Header
@@ -72,4 +76,29 @@
 		z-index: 9999;
 	}
         
+        
 }
+
+@media only screen and (max-width: 426px) {
+    .site-header {
+        /*background-image:none;*/
+        .header-widget-area {
+            display:none;
+        }
+        .wrap {
+            padding:20px 0px;
+            
+            .custom-logo {
+                max-width:250px;
+                margin:0px auto 20px;
+                display:block;
+            }
+            
+            .title-area {
+                width:100%;
+            }
+        }
+    }
+    
+}
+

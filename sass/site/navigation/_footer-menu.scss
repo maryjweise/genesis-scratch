@@ -4,24 +4,36 @@
 .nav-footer {
 	margin-top: 4px;
         flex:5;
-}
-
-.nav-footer .genesis-nav-menu {
-	line-height: 1.5;
-        text-align:left;
-}
-
-.nav-footer .menu-item {
-	display: inline-block;
-}
-
-.nav-footer a {
-	padding: 5px;
-        line-height:100%;
-        text-transform:uppercase;
         
-        &:hover,
-            &:focus {
-            color:$purple;
+    .genesis-nav-menu {
+        line-height: 1.5;
+        text-align:left;
+
+        .menu-item {
+            display: inline-block;
+
+            a {
+                padding: 5px;
+                line-height:100%;
+                text-transform:uppercase;
+
+                &:hover,
+                    &:focus {
+                    color:$purple;
+                }
+            }
         }
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .nav-footer {
+        
+        .genesis-nav-menu {
+            
+            display:flex;
+            justify-content:center;
+            
+        }
+    }
 }

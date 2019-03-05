@@ -44,9 +44,34 @@
         .creds {
             flex:4;
             margin-top:6px;
+            
+            .mdd {
+                border-left: 1px solid white;
+                padding-left: 5px;
+                margin-left:5px;
+            }
         }
 }
 
+@media only screen and (max-width: 426px) {
+    .site-footer {
+        
+        .wrap {
+            display:block;
+            
+            .creds {
+                
+                span {
+                    display:block;
+                    text-align:center;
+                    border:0px;
+                    margin:5px 0px 0px;
+                    padding:0px;
+                }
+            }
+        }
+    }
+}
 
 /*--------------------------------------------------------------
 ## Footer Widgets

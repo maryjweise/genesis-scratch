@@ -214,6 +214,9 @@ and open the template in the editor.
         border:4px solid #fff;
         
     }
+    img.mobile, br {
+        display:none;
+    }
     
 }
 
@@ -233,6 +236,81 @@ and open the template in the editor.
     
     form {
         display:flex;
+    }
+    
+}
+
+
+@media only screen and (max-width: 426px) {
+    .home-slider {
+        
+        margin-top:0px;
+        
+        .slide-excerpt {
+            height:auto;
+            width:100%;
+            margin:0px;
+            left:0;
+            bottom:0;
+            top:initial;
+            
+            p,
+            a.slider-button {
+                display:none;
+            }
+            .slide-excerpt-border {
+                width:100%;
+                text-align:center;
+                
+                
+                h2 {
+                    margin-bottom:0px;
+                }
+            }
+            
+        }
+        .slide-image {
+                max-height:250px;
+            }
+    }
+    
+    
+    .home-shop {
+        .wrap {
+            flex-wrap:wrap;
+            
+            .widget {
+                flex:1 0 50%;
+            }
+        }
+    }
+    
+    .home .content-sidebar-wrap {
+        display:block;
+    }
+    .home-blog {
+        margin:20px 0px;
+    }
+    .home-about {
+        
+        margin:20px;
+        .abouttext {
+            margin-left:0px;
+        }
+        
+        img.desktop {
+            display:none;
+        }
+        img.mobile {
+            display:inline-block;
+            display: inline-block;
+            max-width: 170px;
+            float: left;
+            margin-right: 15px;
+        }
+    }
+    .home-optin {
+        margin:20px;
     }
     
 }

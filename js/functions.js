@@ -40,4 +40,11 @@
 			$("header").removeClass("shrink");
 		}
 	});
+        
+        $(".header-menu-toggle").click(function(){
+            $("#menu-header-menu").toggleClass("active");
+            $(".header-menu-toggle span").text("Menu");
+            $(".active .header-menu-toggle span").text("Close");
+        });
+        
 })(jQuery);

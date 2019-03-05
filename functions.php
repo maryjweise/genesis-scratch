@@ -119,7 +119,7 @@ add_filter( 'genesis_site_layout', 'scratch_wc_layout');
 
 //Change copyright 
 function scratch_footer_creds_text() {
-    $copyright = '<div class="creds"><p>&copy; ' . date('Y') . ' <a href="https://candiedfabrics.com/" target="_blank">Candied Fabrics</a> | Designed &amp; Built By <a href="https://marydoesdev.com/" target="_blank">Mary Does Dev</a></p></div>';
+    $copyright = '<div class="creds"><p><span class="cf">&copy; ' . date('Y') . ' <a href="https://candiedfabrics.com/" target="_blank">Candied Fabrics</a></span><span class="mdd">Designed &amp; Built By <a href="https://marydoesdev.com/" target="_blank">Mary Does Dev</a></span></p></div>';
     return $copyright;
     
 }

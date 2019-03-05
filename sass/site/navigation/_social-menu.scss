@@ -4,6 +4,8 @@
 .nav-social {
     min-width:150px;
     flex:1;
+    
+    
 }
 .nav-social a {
     padding:5px;
@@ -11,4 +13,14 @@
 .nav-social .icon {
     width:1.5em;
     height:1.5em;
+}
+
+@media only screen and (max-width:426px){
+    .nav-social {
+        
+        .genesis-nav-menu {
+            display:flex;
+            justify-content:center;
+        }
+    }
 }
